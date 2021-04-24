@@ -42,6 +42,7 @@ mix phx.server
 
 * [Visual Studio Code](https://code.visualstudio.com/)
     * [jakebecker.elixir-ls](https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls)
+    * [RoyalMist.vscode-eex-format](https://marketplace.visualstudio.com/items?itemName=RoyalMist.vscode-eex-format)
 * [Kiex](https://github.com/taylor/kiex)
 * [Kerl](https://github.com/kerl/kerl)
 
