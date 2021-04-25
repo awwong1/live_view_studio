@@ -1,5 +1,6 @@
 defmodule LiveViewStudioWeb.SearchLive do
   use LiveViewStudioWeb, :live_view
+
   alias LiveViewStudio.Stores
 
   def mount(_params, _session, socket) do
@@ -73,6 +74,7 @@ defmodule LiveViewStudioWeb.SearchLive do
         loading: true
       )
     send(self(), {:run_zip_search, zip})
+
     {:noreply, socket}
   end
 

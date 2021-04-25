@@ -53,6 +53,7 @@ defmodule LiveViewStudioWeb.LicenseLive do
     """
   end
 
+  @spec handle_event(<<_::48>>, map, Phoenix.LiveView.Socket.t()) :: {:noreply, any}
   def handle_event("update", %{"seats" => seats}, socket) do
     seats = String.to_integer(seats)
     socket = assign(socket, seats: seats, amount: Licenses.calculate(seats))

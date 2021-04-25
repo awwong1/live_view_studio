@@ -10,6 +10,7 @@
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
   <body>
+    <script>0//https://bugzilla.mozilla.org/show_bug.cgi?id=1404468</script>
     <header>
     </header>
     <%= @inner_content %>
