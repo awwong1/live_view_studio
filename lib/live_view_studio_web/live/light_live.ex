@@ -62,5 +62,4 @@ defmodule LiveViewStudioWeb.LightLive do
     socket = assign(socket, brightness: brightness)
     {:noreply, socket}
   end
-
 end
