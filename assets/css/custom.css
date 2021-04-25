@@ -116,6 +116,10 @@ ul.examples {
     }
   }
 
+  button:active {
+    @apply bg-indigo-200;
+  }
+
   button:hover {
     @apply bg-white;
   }
