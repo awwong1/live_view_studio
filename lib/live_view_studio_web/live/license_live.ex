@@ -37,7 +37,8 @@ defmodule LiveViewStudioWeb.LicenseLive do
           </div>
           <form phx-change="update">
             <input type="range" min="1" max="10"
-                  name="seats" value="<%= @seats %>" />
+                  name="seats" value="<%= @seats %>"
+                  phx-debounce="250" />
           </form>
           <%= if @time_remaining > 0 do %>
           <h3><%= format_time(@time_remaining) %></h3>
@@ -53,7 +54,6 @@ defmodule LiveViewStudioWeb.LicenseLive do
     """
   end
 
-  @spec handle_event(<<_::48>>, map, Phoenix.LiveView.Socket.t()) :: {:noreply, any}
   def handle_event("update", %{"seats" => seats}, socket) do
     seats = String.to_integer(seats)
     socket = assign(socket, seats: seats, amount: Licenses.calculate(seats))
